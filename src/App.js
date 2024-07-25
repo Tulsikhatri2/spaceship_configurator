@@ -19,6 +19,7 @@ const App = () => {
           <Grid item md={7}>
             <Options />
           </Grid>
+          
           <Grid item md={5} sx={{height:"35vh"}}>
             <Result />
           </Grid>
