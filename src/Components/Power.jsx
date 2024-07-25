@@ -5,6 +5,25 @@ import { useDispatch } from 'react-redux'
 import { powerCalculation } from '../Redux/AmountCalculation/CalculationSlice'
 
 const Power = () => {
+
+  const powerDetails = [
+    {name:"100 MW", amount:0},
+    {name:"150 MW", amount:200},
+    {name:"200 MW", amount:500}
+  ]
+
+  function handlePower(item){
+    if(item.name=="100 MW"){
+      dispatch(powerCalculation(item.amount))
+    }
+    else if (item.name=="150 MW"){
+      dispatch(powerCalculation(item.amount))
+    }
+    else if (item.name=="200 MW"){
+      dispatch(powerCalculation(item.amount))
+    }
+  }
+
   const dispatch = useDispatch()
   return (
     <>
@@ -13,45 +32,25 @@ const Power = () => {
                 Select Power:
               </Typography>
             </Grid>
-
-            <Grid item sx={{ height: "10vh" }} md={4}>
+          {
+            powerDetails.map((item)=>{
+              return(
+              <Grid item sx={{ height: "10vh" }} md={4}>
             <Box sx={{width:"90%", height:"100%", border:"1px solid #5A8F4F",borderRadius:"1vh",
                color:"#7BF762", marginTop:"-2vh",
                "&:hover":{boxShadow:"0px 0px 10px 0px #7BF762" }}}
-               onClick={()=>{dispatch(powerCalculation(0))}}>
+               onClick={()=>handlePower(item)}>
                 <Box sx={{display:"flex", flexDirection:"column", textAlign:"center", fontSize:"1.5vh", 
                   color:"#5A8F4F", lineHeight:"0vh", paddingY:"0.7vh"}}>
-                  <p>100 MW</p>
-                  <p>+0€</p>
+                  <p>{item.name}</p>
+                  <p>+{item.amount}€</p>
                 </Box>
                </Box>
             </Grid>
-
-            <Grid item md={4}>
-            <Box sx={{width:"90%", height:"100%", border:"1px solid #5A8F4F",borderRadius:"1vh",
-               color:"#7BF762", marginTop:"-2vh",
-               "&:hover":{boxShadow:"0px 0px 10px 0px #7BF762" }}}
-               onClick={()=>{dispatch(powerCalculation(200))}}>
-                <Box sx={{display:"flex", flexDirection:"column", textAlign:"center", fontSize:"1.5vh", 
-                  color:"#5A8F4F", lineHeight:"0vh", paddingY:"0.7vh"}}>
-                  <p>150 MW</p>
-                  <p>+200€</p>
-                </Box>
-               </Box>
-            </Grid>
-
-            <Grid item md={4}>
-            <Box sx={{width:"90%", height:"100%", border:"1px solid #5A8F4F",borderRadius:"1vh",
-               color:"#7BF762", marginTop:"-2vh",
-               "&:hover":{boxShadow:"0px 0px 10px 0px #7BF762" }}}
-               onClick={()=>{dispatch(powerCalculation(500))}}>
-                <Box sx={{display:"flex", flexDirection:"column", textAlign:"center", fontSize:"1.5vh",
-                   color:"#5A8F4F", lineHeight:"0vh", paddingY:"0.7vh"}}>
-                  <p>200 MW</p>
-                  <p>+500€</p>
-                </Box>
-               </Box>
-            </Grid>
+              )
+            })
+            
+          }
     </>
   )
 }

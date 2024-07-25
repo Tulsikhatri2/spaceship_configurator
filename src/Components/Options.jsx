@@ -7,6 +7,7 @@ import PackageOption from "./PackageOption";
 import WarpDrive from "./WarpDrive";
 import { useDispatch, useSelector } from "react-redux";
 import { totalCalculation } from "../Redux/AmountCalculation/CalculationSlice";
+import "./Styling.css"
 
 const Options = () => {
   const dispatch = useDispatch()

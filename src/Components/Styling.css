@@ -1,0 +1,59 @@
+.colorTypography{
+    letter-spacing: 2;
+    font-size: 2vh;
+}
+
+.box1{
+    width:90%;
+    height:100%;
+    border:1px solid #5A8F4F;
+    border-radius:1vh;
+    margin-top:-2vh;
+}
+
+.box1:hover{
+    box-shadow:0px 0px 10px 0px #7BF762
+}
+
+.boxSnow{
+    width:45%;
+    height:90%;
+    background-color:white;
+     margin-inline:5.5vh;
+     margin-top:1.5vh;
+     border-radius:1vh
+
+}
+
+.boxVolcano{
+    width:45%;
+    height:90%;
+    background-color:#FF7A00;
+    margin-inline:5.5vh;
+    margin-top:1.5vh;
+    border-radius:1vh
+}
+
+.boxSky{
+    width:45%;
+    height:90%;
+    background-color:#6BE4FF;
+    margin-inline:5.5vh;
+    margin-top:1.5vh;
+    border-radius:1vh
+}
+
+.amount{
+    font-size:1.5vh;
+    color:#5A8F4F;
+    text-align:center;
+    margin-inline:-1px;
+}
+
+.info{
+    font-size:1.75vh;
+    color:#5A8F4F;
+    text-align:center;
+    margin-top:-2vh;
+     line-height:4vh
+}
