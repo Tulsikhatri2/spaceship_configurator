@@ -1,9 +1,14 @@
 .box{
   width: 135vh;
-  height: 115vh;
+  height: 120vh;
   border: 1px solid #7BF762;
   border-radius: 1.5vh;
   margin-top: 5vh;
   margin-left: 39vh;
   margin-bottom: 5vh;
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
