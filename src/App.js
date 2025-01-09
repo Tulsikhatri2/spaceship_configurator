@@ -2,48 +2,41 @@ import React from "react";
 import "./App.css";
 import Options from "./Components/Options";
 import Result from "./Components/Result";
-import { Grid, Typography } from "@mui/material";
-import "./Components/Styling.css"
-
-
+import { Grid } from "@mui/material";
+import "./Components/Styling.css";
+// import "./Components/Projects/Styling2.css"
+// import ProjectData from "./Components/Projects/ProjectData";
 
 const App = () => {
   return (
     <>
       <div className="box">
-        <Grid container spacing={2} sx={{paddingRight:"5vh"}}>
-
-        <Grid item md={12} sx={{color:"#7BF762",}}>
-            <Typography sx={{letterSpacing:5, textAlign:"center", marginTop:"6vh"}} 
-            variant="h6">Spaceship Configurator</Typography>
+        <Grid container spacing={2} sx={{ paddingRight: "5vh" }}>
+          <Grid item md={12} sx={{ color: "#7BF762" }}>
+            <p
+              style={{
+                letterSpacing: 5,
+                textAlign: "center",
+                marginTop: "6vh",
+                fontSize: "3.5vh",
+              }}>
+              Spaceship Configurator
+            </p>
           </Grid>
 
           <Grid item md={8}>
-            <Options/>
+            <Options />
           </Grid>
 
           <Grid item md={4}>
-            <Result/>
+            <Result />
           </Grid>
-          
         </Grid>
       </div>
+
+      {/* <ProjectData/> */}
     </>
   );
 };
 
 export default App;
-
-
-{/* <Grid item md={12} sx={{color:"#7BF762"}}>
-            <Typography sx={{letterSpacing:5, textAlign:"center", marginTop:"6vh"}} 
-            variant="h6">Spaceship Configurator</Typography>
-          </Grid>
-
-          <Grid item md={7}>
-            <Options />
-          </Grid>
-          
-          <Grid item md={5} sx={{height:"35vh"}}>
-            <Result />
-          </Grid> */}

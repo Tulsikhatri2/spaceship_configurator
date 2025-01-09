@@ -1,55 +1,57 @@
-import React from 'react'
-import {Grid, Typography } from '@mui/material'
-import { useSelector } from 'react-redux'
-import "./Styling.css"
+import React from "react";
+import { Grid } from "@mui/material";
+import { useSelector } from "react-redux";
+import "./Styling.css";
 
 const Result = () => {
-
-  const {basePrice,color,power,warpDrive,packageOption,totalCalculation} = useSelector(state=>state.calculations)
+  const {
+    basePrice,
+    color,
+    power,
+    warpDrive,
+    packageOption,
+    totalCalculation,
+  } = useSelector((state) => state.calculations);
 
   return (
     <>
-    <Grid container className='resultBox'>
-      <Grid item md={12} className='resultBoxDesign'>
+      <Grid container className="resultBox">
+        <Grid item md={12} className="resultBoxDesign">
+          <p className="resultBoxText" sx={{ lineHeight: "4.5vh" }}>
+            <span className="totalHeads">Base Price:</span>
+            <span className="totalInfo">{basePrice}€</span>
+          </p>
 
-        <Typography className='resultBoxText' sx={{lineHeight:"4.5vh"}}>
-          <span className='totalHeads'>Base Price:</span> 
-          <span className='totalInfo'>{basePrice}€</span>
-        </Typography>
+          <p className="resultBoxText" sx={{ lineHeight: "4.5vh" }}>
+            <span className="totalHeads">Color:</span>
+            <span className="totalInfo">+{color}€</span>
+          </p>
 
-        <Typography className='resultBoxText' sx={{lineHeight:"4.5vh"}}>
-          <span className='totalHeads'>Color:</span> 
-          <span className='totalInfo'>+{color}€</span>
-        </Typography>
+          <p className="resultBoxText" sx={{ lineHeight: "4.5vh" }}>
+            <span className="totalHeads">Power:</span>
+            <span className="totalInfo">+{power}€</span>
+          </p>
 
-        <Typography className='resultBoxText' sx={{lineHeight:"4.5vh"}} >
-          <span className='totalHeads'>Power:</span> 
-          <span className='totalInfo'>+{power}€</span>
-        </Typography>
-          
-        <Typography className='resultBoxText' sx={{lineHeight:"4.5vh"}}>
-          <span className='totalHeads'>Warp Drive:</span> 
-          <span className='totalInfo'>+{warpDrive}€</span>
-        </Typography>
+          <p className="resultBoxText" sx={{ lineHeight: "4.5vh" }}>
+            <span className="totalHeads">Warp Drive:</span>
+            <span className="totalInfo">+{warpDrive}€</span>
+          </p>
 
-        <Typography className='resultBoxText' sx={{lineHeight:"4.5vh"}}>
-          <span className='totalHeads'>Option Package:</span> 
-          <span className='totalInfo'>+{packageOption}€</span>
-        </Typography>
-
+          <p className="resultBoxText" sx={{ lineHeight: "4.5vh" }}>
+            <span className="totalHeads">Option Package:</span>
+            <span className="totalInfo">+{packageOption}€</span>
+          </p>
         </Grid>
 
-        <Grid item md={12} className='totalGrid'>
-
-          <Typography className='resultBoxText'>
-          <span className='totalHeads'>Total:</span>
-          <span className='totalInfo'>{totalCalculation}€</span>
-          </Typography>
-
+        <Grid item md={12} className="totalGrid">
+          <p className="resultBoxText">
+            <span className="totalHeads">Total:</span>
+            <span className="totalInfo">{totalCalculation}€</span>
+          </p>
+        </Grid>
       </Grid>
-    </Grid>
     </>
-  )
-}
+  );
+};
 
-export default Result
+export default Result;
